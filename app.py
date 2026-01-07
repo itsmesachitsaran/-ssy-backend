@@ -8,7 +8,7 @@ def predict(stock):
     data = yf.download(stock + ".NS", period="6mo")
 
     if data.empty:
-        return jsonify({"error": "Wrong stock name"})
+        return jsonify({"error": "Invalid stock"})
 
     close = data["Close"].iloc[-1]
     ma20 = data["Close"].rolling(20).mean().iloc[-1]
