@@ -2,6 +2,3 @@ flask
 yfinance
 pandas
 numpy
-
-
-“Add requirements.txt”
